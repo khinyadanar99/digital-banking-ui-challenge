@@ -1,1 +1,271 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Public Sans', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  color: #2d314d;
+  background: #fafafa;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: min(1120px, calc(100% - 3rem));
+  margin: 0 auto;
+}
+
+.btn {
+  border: 0;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #31d35c, #2bb7da);
+  color: #fff;
+  font-weight: 700;
+  padding: 0.85rem 1.75rem;
+  cursor: pointer;
+}
+
+.page {
+  min-height: 100vh;
+}
+
+.header {
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header__content {
+  min-height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.header__nav,
+.footer__nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.header__link,
+.footer__nav a {
+  color: #9698a6;
+  font-size: 0.95rem;
+}
+
+.logo {
+  width: 140px;
+}
+
+.hero {
+  background: linear-gradient(180deg, #fff 55%, #f3f4f6 55%);
+  overflow: hidden;
+}
+
+.hero__content {
+  min-height: 38rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 2rem;
+}
+
+.hero__text h1 {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  line-height: 1.1;
+  margin: 0 0 1.25rem;
+}
+
+.hero__text p {
+  color: #9698a6;
+  max-width: 34ch;
+  margin-bottom: 1.75rem;
+}
+
+.hero__image-wrapper {
+  background: url('/images/bg-intro-desktop.svg') center/130% no-repeat;
+  min-height: 38rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+.hero__image {
+  width: min(700px, 130%);
+  transform: translate(14%, -12%);
+}
+
+.features,
+.articles {
+  padding: 5rem 0;
+}
+
+.features {
+  background: #f3f4f6;
+}
+
+h2 {
+  margin: 0 0 1rem;
+  font-size: clamp(1.8rem, 2.3vw, 2.4rem);
+}
+
+.features__intro {
+  color: #9698a6;
+  max-width: 60ch;
+  margin-bottom: 3rem;
+}
+
+.features__grid,
+.articles__grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.feature-card h3,
+.article-card h3 {
+  margin: 0 0 0.85rem;
+  font-size: 1.4rem;
+}
+
+.feature-card__icon {
+  width: 72px;
+  margin-bottom: 1.5rem;
+}
+
+.feature-card p,
+.article-card p {
+  color: #9698a6;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.article-card {
+  background: #fff;
+  border-radius: 0.25rem;
+  overflow: hidden;
+}
+
+.article-card__image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.article-card__content {
+  padding: 1.5rem;
+}
+
+.article-card__author {
+  margin-bottom: 0.75rem !important;
+  font-size: 0.82rem;
+}
+
+.article-card h3 {
+  font-size: 1.1rem;
+}
+
+.footer {
+  background: #2d314d;
+  color: #fff;
+  padding: 3rem 0;
+}
+
+.footer__content {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.footer__branding {
+  display: grid;
+  gap: 2rem;
+}
+
+.footer__socials {
+  display: flex;
+  gap: 0.9rem;
+}
+
+.footer__cta {
+  justify-self: end;
+  text-align: right;
+}
+
+.footer__cta p {
+  margin-top: 1.5rem;
+  color: #9698a6;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 980px) {
+  .header__nav {
+    display: none;
+  }
+
+  .hero__content {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding-top: 2rem;
+  }
+
+  .hero__text p {
+    margin-inline: auto;
+  }
+
+  .hero__image-wrapper {
+    order: -1;
+    min-height: 18rem;
+    background: url('/images/bg-intro-mobile.svg') center/cover no-repeat;
+  }
+
+  .hero__image {
+    width: min(420px, 100%);
+    transform: translate(0, -22%);
+    margin-inline: auto;
+  }
+
+  .features__grid,
+  .articles__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .footer__content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer__branding,
+  .footer__cta {
+    justify-self: center;
+  }
+
+  .footer__nav {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 640px) {
+  .header .btn {
+    display: none;
+  }
+
+  .container {
+    width: min(1120px, calc(100% - 2rem));
+  }
+
+  .features__grid,
+  .articles__grid {
+    grid-template-columns: 1fr;
+  }
+}
 @import "tailwindcss";
