@@ -1,1 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
+
+@theme {
+  --color-Blue-950: hsl(233, 26%, 24%);
+  --color-Green-500: hsl(136, 64%, 51%);
+  --color-Cyan-400: hsl(192, 69%, 51%);
+
+  --color-Gray-600: hsl(233, 8%, 62%);
+  --color-Gray-100: hsl(220, 16%, 96%);
+  --color-Gray-50: hsl(0, 0%, 98%);
+  --color-White: hsl(0, 100%, 100%);
+}
+
+* {
+  font-family: "Public Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
