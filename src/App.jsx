@@ -1,17 +1,23 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "./assets/vite.svg";
-import heroImg from "./assets/hero.png";
 import "./App.css";
 import Header from "./components/Header";
-import Section from "./components/Section";
+import Feature from "./components/Feature";
+import Hero from "./components/Hero";
+import Article from "./components/Article";
+import Footer from "./components/Footer";
 
 function App() {
-  const [count, setCount] = useState(0);
 
   return (
     <>
         <Header />
+       
+        <Hero></Hero>
+
+        <Feature></Feature>
+
+        <Article></Article>
+
+        <Footer></Footer>
     </>
   );
 }
