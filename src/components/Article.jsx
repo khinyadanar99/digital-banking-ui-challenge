@@ -11,7 +11,7 @@ function Article() {
     <div className="bg-Gray-50 py-20">
         <Section>
             <h2>Latest Articles</h2>
-            <div className="grid grid-cols-4 gap-8 mt-15">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-15">
                 {articles?.map((article, index) => {
                     
                     return(

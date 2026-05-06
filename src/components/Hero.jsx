@@ -16,7 +16,7 @@ function Hero() {
                 <Button></Button>
             </div>  
         </Section>
-        <img src="/images/image-mockups.png" className="absolute top-0 right-0"></img>
+        {/* <img src="/images/image-mockups.png" className="absolute top-0 right-0"></img> */}
     </div>
     
   );

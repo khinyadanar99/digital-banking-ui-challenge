@@ -4,20 +4,20 @@ import Feature from "./components/Feature";
 import Hero from "./components/Hero";
 import Article from "./components/Article";
 import Footer from "./components/Footer";
+import HeroSection from "./components/HeroSection";
 
 function App() {
-
   return (
     <>
-        <Header />
-       
-        <Hero></Hero>
+      <Header />
+      <HeroSection />
+      {/* <Hero></Hero> */}
 
-        <Feature></Feature>
+      <Feature></Feature>
 
-        <Article></Article>
+      {/* <Article></Article> */}
 
-        <Footer></Footer>
+      {/* <Footer></Footer> */}
     </>
   );
 }
