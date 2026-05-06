@@ -8,7 +8,7 @@ function HeroSection() {
 
   return (
     <div className=" min-h-[80vh]">
-      <Section customClass={"px-0"}>
+      <Section customPadding="px-0">
         <div className="flex flex-col-reverse lg:flex-row">
           <div className="">
             <div className="lg:w-md lg:py-40 py-20 text-center lg:text-left ">
